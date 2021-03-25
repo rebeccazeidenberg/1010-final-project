@@ -3,7 +3,7 @@ import Entry from './Entry';
 
 function Entries(props) {
     return(
-        <div>
+        <div className="Entries">
         {props.entries.map((e, i) => {
             return <Entry entry={e} key={i}/>
             }

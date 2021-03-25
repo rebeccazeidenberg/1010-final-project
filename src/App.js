@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Redirect
 } from "react-router-dom";
 import './App.css';
 import Nav from './Nav';
@@ -11,12 +11,23 @@ import Contact from './Contact';
 import Submissions from './Submissions';
 import Home from './Home';
 import Login from './Login';
-import Background from './pictures/background.jpeg';
+import About from './About';
+import Portfolio from './Portfolio';
+import Cookies from 'js-cookie';
+
+const isCookie = function() {
+  const cookie = Cookies.get("token");
+  return !!cookie;
+}
+
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(isCookie());
+
   return (
     <Router>
-      <div>
+      <div className="Pages">
         <Nav />
         <Switch>
           <Route path="/about">
@@ -32,11 +43,11 @@ function App() {
           </Route>
 
           <Route path="/submissions">
-            <Submissions />
+            {isLoggedIn ? <Submissions /> : <Redirect to="/login" />}           
           </Route>
 
-          <Route path="/login">
-            <Login />
+          <Route path="/login">         
+            <Login setIsLoggedIn={setIsLoggedIn} />
           </Route>
         
           <Route path="/">
@@ -44,25 +55,12 @@ function App() {
           </Route>
         </Switch>
       </div>
+
+      <footer>
+        Rebecca Zeidenberg Copyright 2021
+      </footer>
     </Router>
   );
 }
-
-
-function About() {
-  return( 
-  <div>
-    <h2>About</h2>
-      <div>{Background}</div>
-  </div>
-  )
-}
-
-function Portfolio() {
-  return <h2>Portfolio</h2>
-}
-
-
-
 
 export default App;

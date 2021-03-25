@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 
-
 function Contact() {   
         const [name, setName] = useState(""); 
         const [phoneNumber, setPhoneNumber] = useState("");
@@ -36,33 +35,53 @@ function Contact() {
 
     
     return (
-        <div>
-            <h2>Contact</h2>
-            <label>
-                Name
-                <input type="text" onChange={(event) => {setName(event.target.value)}} />
-            </label>
+        <div className="ContactPage">
+            <div className="Portrait" style={{backgroundImage: "url(/pictures/portrait1.jpg)"}}/>
+            <div className="ContactForm">
+                <h2>Contact</h2>
+                <div className="InputBox">
+                    <label className="Text">
+                        Name
+                    </label>
+                    <input type="text" onChange={(event) => {setName(event.target.value)}} />
+                </div>
 
-            <label>
-                Phone Number
-                <input type="text" onChange={(event) => {setPhoneNumber(event.target.value)}}/>
-            </label>
+                <div className="InputBox">
+                    <label className="Text">
+                        Phone Number
+                    </label>
+                    <input type="text" onChange={(event) => {setPhoneNumber(event.target.value)}}/>
+                </div>
 
-            <label>
-                Email
-                <input type="email" onChange={(event) => {setEmail(event.target.value)}}/>
-            </label>
+                <div className="InputBox">
+                    <label className="Text">
+                        Email
+                    </label>
+                    <input type="email" onChange={(event) => {setEmail(event.target.value)}}/>
+                </div>
 
-            <label>
-                Content
-                <input type="text" onChange={(event) => {setContent(event.target.value)}}/>
-            </label>
+                <div className="InputBox">
+                    <label className="Text">
+                        Type your message here...
+                    </label>
+                    <textarea name="message" onChange={(event) => {setContent(event.target.value)}}/>
+                </div>
 
-            <button onClick={clickHandler}>
-                Submit
-            </button>
+                <button onClick={clickHandler}>
+                    Contact Us
+                </button>
+                </div>
+                <div className="SideText">
+                    <div className="Info">Email</div>
+                    <div className="InsideInfo">rebeccaz@message.com</div>
 
-        </div>
+                    <div className="Info">Phone Number</div>
+                    <div className="InsideInfo">(555)-123-4567</div>
+
+                    <div className="Info">Location</div>
+                    <div className="InsideInfo">Toronto, Canada</div>
+                </div>
+            </div>
     )
 }
 

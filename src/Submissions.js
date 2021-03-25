@@ -27,7 +27,7 @@ function Submissions() {
     }, []);
 
     return (
-        <div>
+        <div className="SubmissionsPage">
             <h3>Submissions List</h3>
             <Entries entries={entries}/>
 

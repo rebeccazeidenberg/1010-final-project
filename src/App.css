@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
+
 html {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 20px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-weight: 300;
 }
 
 .App {
   text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+.Pages {
+  min-height: 93vh;
+}
+
+/* Nav Bar */
+
+.NavWrapper {
+  position: relative;
 }
 
 .NavList {
@@ -22,16 +30,313 @@ html {
 }
 
 .NavList li {
-  padding: 20px;
-  
+  padding: 20px; 
+  font-size: 15px;
 }
 
-.Container {
-  background-image: 
-  url("/src/pictures/background.jpeg") center no-repeat,
-  linear-gradient(135deg, 
-  rgba(53, 53, 53, 0.5) 0%,
-  rgba(255, 255, 255, 0.5) 100%);
-  background-size: initial;
-  position: relative;
+/* Home Page */
+
+.Home {
+  display: flex;
+}
+
+.HomeText {
+  padding: 50px;
+  width: 200px;
+
+}
+
+.Text h3 {
+  font-size: 20px;
+}
+
+.Text p {
+  font-size: 15px;
+}
+
+.Pictures {
+  display: flex;
+  flex-direction: column;
+  width: 850px;
+  background-size: 850px;
+  margin-bottom: 20px;
+}
+
+.Picture {
+  width: 850px;
+  height: 531px;
+  background-size: 850px;
+  margin-bottom: 20px;
+}
+/* Contact Form */
+
+.ContactPage {
+  display: flex;
+  justify-content: right;
+}
+
+.ContactForm {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
+  padding: 20px;
+  padding-right: 100px;
+  padding-bottom: 2px;
+}
+
+.ContactForm label {
+  display: block;
+  padding: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.ContactForm input {
+  width: 300px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+.ContactForm textarea {
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  width: 300px;
+  height: 100px;
+  margin-bottom: 35px;
+}
+
+.ContactForm button {
+  width: 150px;
+  height: 60px; 
+  border-radius: 50%;
+  border: none;
+  background: #333333;
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 70px;  
+}
+
+.Portrait {
+  height: 579px;
+  width: 425px;
+  background-size: 579px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+}
+
+.SideText {
+  margin-top: 150px;
+}
+
+.Info {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.InsideInfo {
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+/* Login */
+
+.Login {
+  display: flex;
+  flex-direction: right;
+}
+
+.LoginImage {
+  display: flex;
+  height: 565px;
+  width: 754px;
+  background-size: 754px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.LoginText {
+  float: right;
+  flex-direction: row;
+  width: 400px;
+  margin-top: 70px;
+}
+
+.LoginText h2 {
+  margin-left: 65px;
+  font-size: 35px;
+}
+
+.LoginText label input {
+  display: block;
+}
+
+.LoginText label {
+  font-size: 17px;
+}
+
+.LoginText input {
+  width: 300px;
+  height: 25px;
+  border: 1px solid #000000;
+  margin-bottom: 40px;
+  margin-top: 5px;
+}
+
+.LoginText button {
+  width: 150px;
+  height: 60px; 
+  border-radius: 50%;
+  border: none;
+  background: #333333;
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 70px;
+}
+
+/* About Page */
+
+.AboutPage {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.TextOne {
+  padding: 100px;
+  width: 300px;
+  align-content: center;
+}
+
+.TextOne p {
+  font-size: 15px;
+  align-content: center;
+}
+
+.TextTwo {
+  padding: 50px;
+  width: 300px;
+  flex: 2;
+}
+
+.TextTwo p {
+  font-size: 15px;
+  flex: 2
+}
+
+.TextThree {
+  padding: 100px;
+  width: 300px;
+  align-content: center;
+}
+
+.TextThree p {
+  font-size: 15px;
+  align-content: center;
+}
+
+.AboutImageOne {
+  height: 494px;
+  width: 641px;
+  background-size: 641px;
+}
+
+.AboutImageTwo {
+  height: 450px;
+  width: 671px;
+  background-size: 671px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.AboutImageThree {
+  height: 450px;
+  width: 671px;
+  background-size: 671px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+/* Portfolio */
+
+.Portfolio {
+  display: flex;
+  flex-direction: row;
+}
+
+.PortfolioText {
+  margin-left: 50px;
+  margin-bottom: 60px;
+}
+
+.PortfolioText p {
+  font-size: 15px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.PortfolioPicture {
+  display: flex;
+  flex-direction: column;
+}
+
+.PortImageOne {
+  height: 500px;
+  width: 762px;
+  background-size: 762px;
+  margin-bottom: 20px;
+  margin-left: 14px;
+}
+
+.PortImageTwo {
+  height: 500px;
+  width: 750px;
+  background-size: 750px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.PortImageThree {
+  height: 500px;
+  width: 750px;
+  background-size: 750px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.PortImageFour {
+  height: 465px;
+  width: 750px;
+  background-size: 750px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.PortImageFive {
+  height: 500px;
+  width: 750px;
+  background-size: 750px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+/* Submissions Page */
+
+.SubmissionsPage {
+  margin-left: 20px;
+}
+
+.Entry {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+
+footer {
+  background-color: lightgray;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
 }
