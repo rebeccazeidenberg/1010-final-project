@@ -13,6 +13,7 @@ import Home from './Home';
 import Login from './Login';
 import About from './About';
 import Portfolio from './Portfolio';
+import Admin from './Admin';
 import Cookies from 'js-cookie';
 
 const isCookie = function() {
@@ -44,6 +45,10 @@ function App() {
 
           <Route path="/submissions">
             {isLoggedIn ? <Submissions /> : <Redirect to="/login" />}           
+          </Route>
+
+          <Route path="/admin">
+            {isLoggedIn ? <Admin /> : <Redirect to="/login" />}           
           </Route>
 
           <Route path="/login">         

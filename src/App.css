@@ -199,12 +199,12 @@ html {
 
 /* About Page */
 
-.AboutPage {
+/* .AboutPage {
   display: flex;
   flex-flow: row wrap;
-}
+} */
 
-.TextOne {
+/* .TextOne {
   padding: 100px;
   width: 300px;
   align-content: center;
@@ -257,15 +257,48 @@ html {
   background-size: 671px;
   margin-left: 50px;
   margin-bottom: 50px;
+} */
+
+.AboutResumeInfo {
+  display: flex;
 }
+
+.AboutPics img {
+  width: 671px;
+  padding: 20px;
+}
+
+.AboutText {
+  margin-left: 20px;
+}
+
 
 /* Portfolio */
 
 .Portfolio {
-  display: flex;
-  flex-direction: row;
+  margin-left: 20px;
 }
 
+.PortContent {
+  margin: auto;
+}
+
+.PortfolioPics {
+  width: 750px;
+  margin: 0 auto;
+}
+
+.PortfolioText {
+  width: 750px;
+  margin: 0 auto;
+}
+
+.PortfolioPics img {
+  width: 750px;
+}
+
+
+/* 
 .PortfolioText {
   margin-left: 50px;
   margin-bottom: 60px;
@@ -322,6 +355,12 @@ html {
   margin-left: 20px;
 }
 
+.InputBoxAdmin {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+} */ */
+
 /* Submissions Page */
 
 .SubmissionsPage {
@@ -331,6 +370,46 @@ html {
 .Entry {
   margin-bottom: 20px;
 }
+
+/* Admin Resume */
+
+.ResItems {
+  display: flex;
+  padding: 30px;
+  font-size: 15px;
+  margin-right: 70px;
+}
+
+.ResItems > div {
+  padding: 20px;
+}
+
+.ResPics > img {
+  width: 220px;
+}
+
+.PortItems {
+  display: flex;
+  padding: 30px;
+  font-size: 15px;
+  margin-right: 70px;
+}
+
+.PortItems > div {
+  padding: 20px;
+}
+
+.PortPics > img {
+  width: 220px;
+}
+
+.CreateForm h2 {
+  margin-left: 50px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+} 
+
 
 /* Footer */
 

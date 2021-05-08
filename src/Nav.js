@@ -26,6 +26,11 @@ function Nav() {
               <li>
                 <Link to="/submissions">Submissions</Link>
               </li>
+
+              <li>
+              <Link to="/admin">Admin</Link>
+              </li>
+
             </ul>
           </nav>
         </div>
