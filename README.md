@@ -1,4 +1,4 @@
-## Front-end project
+## Front-end for course project
 
 # Installation
 
