@@ -9,13 +9,9 @@ function Portfolio() {
     }, []);
 
     const fetchPortfolioItems = () => {
-        const bearer = "Bearer " + Cookies.get("token");
-        return fetch("/portfolio", {
+        // const bearer = "Bearer " + Cookies.get("token");
+        return fetch(`${process.env.REACT_APP_API}/portfolio`, {
             method: "GET",
-            withCredentials: true,
-            headers: {
-                "Authorization": bearer
-            }
         })
         .then(response => response.json())
         .then((data) => {

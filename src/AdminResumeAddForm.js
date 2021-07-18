@@ -21,7 +21,7 @@ function AdminResumeAddForm(props) {
             description,
             image
         }
-        fetch("/resume", {
+        fetch(`${process.env.REACT_APP_API}/resume`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -17,7 +17,7 @@ function AdminResumeUpdateForm(props) {
             image
         }
 
-        fetch(`http://localhost:4000/resume/${props.resumeItem.id}`, {
+        fetch(`${process.env.REACT_APP_API}/resume/${props.resumeItem.id}`, {
             method: "PUT",
             headers: {
                 "Authorization": bearer,

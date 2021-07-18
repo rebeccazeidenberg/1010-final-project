@@ -17,7 +17,7 @@ function Contact() {
                 content
             }
 
-            fetch("http://localhost:4000/contact_form/entries", {
+            fetch(`${process.env.REACT_APP_API}/contact_form/entries`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

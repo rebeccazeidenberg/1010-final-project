@@ -15,7 +15,7 @@ function AdminPortfolioUpdateForm(props) {
             image
         }
 
-        fetch(`http://localhost:4000/portfolio/${props.portfolioItem.id}`, {
+        fetch(`${process.env.REACT_APP_API}/portfolio/${props.portfolioItem.id}`, {
             method: "PUT",
             headers: {
                 "Authorization": bearer,

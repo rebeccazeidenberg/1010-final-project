@@ -18,7 +18,7 @@ function AdminPortfolioAddForm(props) {
             description,
             image
         }
-        fetch("/portfolio", {
+        fetch(`${process.env.REACT_APP_API}/portfolio`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -10,13 +10,9 @@ function About() {
     }, []);
 
     const fetchResumeItems = () => {
-        const bearer = "Bearer " + Cookies.get("token");
-        return fetch("/resume", {
+        // const bearer = "Bearer " + Cookies.get("token");
+        return fetch(`${process.env.REACT_APP_API}/resume`, {
             method: "GET",
-            withCredentials: true,
-            headers: {
-                "Authorization": bearer
-            }
         })
         .then(response => response.json())
         .then((data) => {

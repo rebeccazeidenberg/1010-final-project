@@ -15,7 +15,7 @@ function AdminPortfolio() {
 
     const fetchPortfolioItems = () => {
         const bearer = "Bearer " + Cookies.get("token");
-        return fetch("/portfolio", {
+        return fetch(`${process.env.REACT_APP_API}/portfolio`, {
             method: "GET",
             withCredentials: true,
             headers: {
@@ -35,7 +35,7 @@ function AdminPortfolio() {
 
     const deleteHandler = (id) => {
         const bearer = "Bearer " + Cookies.get("token");
-        fetch(`http://localhost:4000/portfolio/${id}`, {
+        fetch(`process.env.REACT_APP_API/portfolio/${id}`, {
             method: "DELETE",
             withCredentials: true,
             headers: {

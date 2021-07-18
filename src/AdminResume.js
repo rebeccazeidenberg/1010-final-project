@@ -15,13 +15,9 @@ function AdminResume() {
     }, []);
 
     const fetchResumeItems = () => {
-        const bearer = "Bearer " + Cookies.get("token");
-        return fetch("/resume", {
+        // const bearer = "Bearer " + Cookies.get("token");
+        return fetch(`${process.env.REACT_APP_API}/resume`, {
             method: "GET",
-            withCredentials: true,
-            headers: {
-                "Authorization": bearer
-            }
         })
         .then(response => response.json())
         .then((data) => {
@@ -36,7 +32,7 @@ function AdminResume() {
 
     const deleteHandler = (id) => {
         const bearer = "Bearer " + Cookies.get("token");
-        fetch(`http://localhost:4000/resume/${id}`, {
+        fetch(`${process.env.REACT_APP_API}/resume/${id}`, {
             method: "DELETE",
             withCredentials: true,
             headers: {

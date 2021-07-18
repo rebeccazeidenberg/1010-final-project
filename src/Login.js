@@ -15,7 +15,7 @@ function Login(props) {
             password
         };  
 
-        fetch("http://localhost:4000/auth", {
+        fetch(`${process.env.REACT_APP_API}/auth`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
